@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 using FluentAssertions;
 using NUnit.Framework;
