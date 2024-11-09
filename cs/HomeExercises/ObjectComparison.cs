@@ -16,15 +16,14 @@ namespace HomeExercises
 				new Person("Vasili III of Russia", 28, 170, 60, null));
 
 			// Перепишите код на использование Fluent Assertions.
-			Assert.AreEqual(actualTsar.Name, expectedTsar.Name);
-			Assert.AreEqual(actualTsar.Age, expectedTsar.Age);
-			Assert.AreEqual(actualTsar.Height, expectedTsar.Height);
-			Assert.AreEqual(actualTsar.Weight, expectedTsar.Weight);
-
-			Assert.AreEqual(expectedTsar.Parent!.Name, actualTsar.Parent!.Name);
-			Assert.AreEqual(expectedTsar.Parent.Age, actualTsar.Parent.Age);
-			Assert.AreEqual(expectedTsar.Parent.Height, actualTsar.Parent.Height);
-			Assert.AreEqual(expectedTsar.Parent.Parent, actualTsar.Parent.Parent);
+			expectedTsar.Name.Should().Be(actualTsar.Name);
+			expectedTsar.Age.Should().Be(actualTsar.Age);
+			expectedTsar.Height.Should().Be(actualTsar.Height);
+			expectedTsar.Weight.Should().Be(actualTsar.Weight);
+			expectedTsar.Parent!.Name.Should().Be(actualTsar.Parent!.Name);
+			expectedTsar.Parent.Age.Should().Be(actualTsar.Parent.Age);
+			expectedTsar.Parent.Height.Should().Be(actualTsar.Parent.Height);
+			expectedTsar.Parent.Parent.Should().Be(actualTsar.Parent.Parent);
 		}
 
 		[Test]
